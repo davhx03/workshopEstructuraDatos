@@ -28,9 +28,11 @@ public class HtmlValidator {
 					stackTags.push(currentTag);
 					//si pilas vacias es porque el html esta bien
 				}else if(!currentTag.isSelfClosing()){
-					if(currentTag.matches(stackTags.peek())){
+					if(!stackTags.isEmpty() && currentTag.matches(stackTags.peek())){
 						stackTags.pop();
-					}else{
+					} else if (stackTags.isEmpty()) {
+						return null;
+					} else{
 						return stackTags;
 					}
 				}
