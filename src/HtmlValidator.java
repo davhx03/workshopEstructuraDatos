@@ -39,25 +39,5 @@ public class HtmlValidator {
 
 		}
 			return stackTags;
-
-
-	//currentTag.matches(stackTags.peek()))
-//				if (tags.poll().matches(stackTags.peek())) {
-//					stackTags.pop();
-//				} else {
-//					return stackTags;  //eliminas
-//				}
-//			}
-
-
-//		HtmlTag openTag = stack.peek();
-//
-//		if (currentTag.matches(openTag)) {
-//			stack.pop();
-//		} else {
-//			return stack;
-//		}
-
-//		return null; // this line is here only so this code will compile if you don't modify it
 	}
 }
